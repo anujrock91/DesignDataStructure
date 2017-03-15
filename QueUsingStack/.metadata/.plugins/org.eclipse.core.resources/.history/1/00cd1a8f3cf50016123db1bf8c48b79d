@@ -1,0 +1,12 @@
+package Snippet;
+import java.util.*;
+
+public class MyQueue {
+	
+	Stack<Integer> insert = new Stack<>();
+	Stack<Integer> remove = new Stack<>();
+	
+	public MyQueue(){}
+	
+	
+}

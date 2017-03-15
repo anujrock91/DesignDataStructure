@@ -1,0 +1,1 @@
+INDEX VERSION 1.127+B:\FullTimeJob\Design\LRUCache\.metadata\.plugins\org.eclipse.jdt.core

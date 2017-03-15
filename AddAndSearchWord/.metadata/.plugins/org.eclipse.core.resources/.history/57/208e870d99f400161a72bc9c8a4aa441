@@ -1,0 +1,51 @@
+package Snippet;
+import java.util.*;
+
+public class AddAndSearch {
+	
+	HashSet<String> words;
+	ArrayList<HashSet<Character>> trie;
+	
+	public AddAndSearch(){
+		words = new HashSet<>();
+		trie = new ArrayList<>();
+	}
+	
+	public void addWord(String word){
+		words.add(word);
+		insertTrie(word, 0);
+	}
+	
+	
+	public void insertTrie(String word, int count){
+		if(count >= word.length()){ return; }
+		Character c = word.charAt(count);
+		if(count >= trie.size()){
+			HashSet<Character> set = new HashSet<>();
+			trie.add(set);
+		}
+		trie.get(count).add(c);
+		insertTrie(word, count+1);
+	}
+	
+	
+	public boolean search(String word){
+		
+	}
+	
+	public boolean search(String word, int count, String temp){
+		if(count >= word.length()){
+			return words.contains(temp);
+		}
+		Character c = word.charAt(count);
+		if()
+	}
+	
+	public static void main(String args[]){
+		AddAndSearch obj = new AddAndSearch();
+		obj.addWord("bad");
+		obj.addWord("dad");
+		obj.addWord("mad");
+	}
+	
+}

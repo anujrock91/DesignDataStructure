@@ -1,0 +1,27 @@
+package Snippet;
+import java.util.Stack;
+
+public class MinStack {
+	
+	Stack<Integer> original = new Stack<>();
+	Stack<Integer> original = new Stack<>();
+	public MinStack() {
+        
+    }
+    
+    public void push(int x) {
+        
+    }
+    
+    public void pop() {
+        
+    }
+    
+    public int top() {
+        
+    }
+    
+    public int getMin() {
+        
+    }	
+}

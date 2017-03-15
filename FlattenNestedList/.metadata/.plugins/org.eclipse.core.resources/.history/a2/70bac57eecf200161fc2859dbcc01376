@@ -1,0 +1,45 @@
+import java.util.*;
+
+public interface NestedInteger {
+   // @return true if this NestedInteger holds a single integer, rather than a nested list.
+	public boolean isInteger();
+    public Integer getInteger();
+    public List<NestedInteger> getList();
+}
+
+public class NestedIterator implements Iterator<Integer> {
+    
+    LinkedList<Integer> que = new LinkedList<Integer>();
+    
+    public NestedIterator(List<NestedInteger> nestedList) {
+        getNestedInteger(nestedList, que);
+    }
+    
+    private void getNestedInteger(List<NestedInteger> nestedList, LinkedList<Integer> que){
+        for(int i=0;i<nestedList.size();i++){
+            NestedInteger temp = nestedList.get(i);
+            if(temp.isInteger()){
+                que.addLast(temp.getInteger());
+            }
+            else{
+                getNestedInteger(temp.getList(), que);
+            }
+        }
+    }
+
+    @Override
+    public Integer next() {
+        return que.removeFirst();
+    }
+
+    @Override
+    public boolean hasNext() {
+        return que.size()>0;
+    }
+}
+
+/**
+ * Your NestedIterator object will be instantiated and called as such:
+ * NestedIterator i = new NestedIterator(nestedList);
+ * while (i.hasNext()) v[f()] = i.next();
+ */

@@ -1,0 +1,27 @@
+package Snippet;
+
+public class ShortestWordDistance2 {
+	
+	String [] wordsArr;
+	
+	public ShortestWordDistance2(String [] words){
+		wordsArr = words;
+	}
+	
+	public int shortestWordDist(String word1, String word2){
+		Integer index1 = null;
+		Integer index2 = null;
+		for(int i=0;i<wordsArr.length;i++){
+			String word = wordsArr[i];
+			if(word.equals(word1)){
+				index1 = i;
+				if(index2 != null){				}
+			}
+			else if(word.equals(word2)){
+				index2 = i;
+				
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,15 @@
+package Snippet;
+
+public class ShortestWordDistance2 {
+	
+	String [] wordsArr;
+	
+	public ShortestWordDistance2(String [] words){
+		wordsArr = words;
+	}
+	
+	public int shortestWordDist(String word1, String word2){
+				
+	}
+	
+}

@@ -1,0 +1,17 @@
+package Snippet;
+import java.util.*;
+
+public class UniqueWordAbbrevation {
+	
+	private HashSet<String> abbrevations;
+	private HashMap<String, Boolean> map; 
+	public UniqueWordAbbrevation(String [] words){
+		abbrevations = new HashSet<>();
+		map = new HashMap<>();
+		
+	}
+	
+	public void constDict(String [] words){
+		
+	}
+}

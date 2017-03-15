@@ -1,0 +1,30 @@
+package Snippet;
+import java.util.Stack;
+
+public class MinStack {
+	
+	Stack<Integer> original = new Stack<>();
+	Stack<Integer> min = new Stack<>();
+	
+	public MinStack() {   }
+    
+    public void push(int x) {
+        original.push(x);
+        if(x<=min.peek()){
+        	min.push(x);
+        }
+    }
+    
+    public void pop() {
+        int x = original.pop();
+        
+    }
+    
+    public int top() {
+        
+    }
+    
+    public int getMin() {
+        
+    }	
+}

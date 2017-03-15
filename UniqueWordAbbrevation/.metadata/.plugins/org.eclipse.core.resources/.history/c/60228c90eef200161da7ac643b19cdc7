@@ -1,0 +1,22 @@
+package Snippet;
+import java.util.*;
+
+public class UniqueWordAbbrevation {
+	
+	private HashSet<String> abbrevations;
+	private HashMap<String, Boolean> map; 
+	public UniqueWordAbbrevation(String [] words){
+		abbrevations = new HashSet<>();
+		map = new HashMap<>();
+		constDict(words);
+	}
+	
+	private void constDict(String [] words){
+		for(String word: words){
+			if(map.containsKey(word)){ continue; }
+			String abbr = ""+word.charAt(0)+(word.length()-2)+word.charAt(word.length()-1);
+			boolean dec = (abbrevations.contains(abbr))?map.put(word, false):map.put(word, true);
+			abbrevations.add(abbr);
+		}
+	}
+}
